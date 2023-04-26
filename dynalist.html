@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function addFruit() {
+        var fruit = document.getElementById("fruit");
+        if(fruit.value !="") {
+            var opt = document.createElement("option");
+            opt.appendChild(document.createTextNode(fruit.value));
+            document.getElementById("basket").appendChild(opt);
+            fruit.value="";
+            fruit.focus();
+        } else {
+            alert("Provide fruit to add");
+            fruit.focus();
+        }
+    }
+    </script>
+</head>
+<body>
+    Fruit Name: <input id="fruit"> 
+    <input type="button" value="Add to basket" onclick="addFruit()"><hr>
+    <select id="basket">
+        <option>Apple</option>
+        <option>Banana</option>
+    </select>
+</body>
+</html>

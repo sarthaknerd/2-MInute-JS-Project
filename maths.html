@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function add(n1, n2) {
+            if(isNaN(n1) || isNaN(n2)) {
+                alert("Enter correct number");
+                return;
+            }else{
+                //  alert(parseInt(n1)+parseInt(n2));
+                //  return;
+                document.getElementById("result").innerHTML=parseInt(n1)+parseInt(n2);
+            }
+
+        }
+        function subs(n1, n2) {
+            if(isNaN(n1) || isNaN(n2)) {
+                alert("Enter correct number");
+                return;
+            }else{
+                // alert(parseInt(n1)-parseInt(n2));
+                //  return;
+                document.getElementById("result").innerHTML=parseInt(n1)-parseInt(n2);
+
+            
+            }
+
+        }
+    </script>
+</head>
+<body>
+    Enter a number: <input id="num1"><br>
+    Enter another: <input id="num2"><br>
+    <input type="button" value="Addition" onclick="add(num1.value , num2.value)">
+    <input type="button" value="Substract" onclick="subs(num1.value,num2.value)">
+    <div id="result"></div>
+</body>
+</html>
